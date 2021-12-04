@@ -7,12 +7,13 @@ function FeelingForm() {
     
     const dispatch = useDispatch();
 
-    const onFeelingSubmit = (event) => {
+    const onFeelingSubmit = () => {
         console.log('Feeling Dispatch');
         dispatch({
             type: 'ADD_FEELING',
             payload: feelingInput
         })
+        history.push('/understanding');
     }
 
     return (
@@ -21,11 +22,11 @@ function FeelingForm() {
             value={feelingInput}
             onChange={(event) => {setFeelingInput(event.target.value)}}
             type="number"
-            placeholder="How are you feeling about today's content?" />
+            placeholder="How are you feeling?" />
         <button onClick={onFeelingSubmit}>Next</button>
     </form>
     )
 
-} // end FeelinForm
+} // end FeelingForm
 
 export default FeelingForm;
