@@ -4,6 +4,7 @@ import './App.css';
 import FeelingForm from "../Feeling/Feeling.jsx";
 import UnderstandingForm from "../Understanding/Understanding.jsx";
 import SupportForm from "../Support/Support.jsx";
+import CommentsForm from "../Comments/Comments.jsx"
 import { HashRouter as Router, Route, Link } from "react-router-dom";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
     < FeelingForm />
     < UnderstandingForm />
     < SupportForm />
+    < CommentsForm />
     <Router>
       <Route exact path="/understanding">
         <UnderstandingForm />
