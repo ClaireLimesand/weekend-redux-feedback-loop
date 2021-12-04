@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import './App.css';
+import FeelingForm from "../Feeling/Feeling.jsx"
 import { HashRouter as Router, Route, Link } from "react-router-dom";
 
 function App() {
@@ -11,12 +12,12 @@ function App() {
         <h1 className='App-title'>Feedback!</h1>
         <h4>Don't forget it!</h4>
       </header>
-    
-    <Router>
-      <Route exact path="/">
+    < FeelingForm />
+    {/* <Router>
+      <Route exact path="/"> */}
 {/* <compontent name will go here /> */}
-      </Route>
-    </Router>
+      {/* </Route>
+    </Router> */}
     
     </div>
     
