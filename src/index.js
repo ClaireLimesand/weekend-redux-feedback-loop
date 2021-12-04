@@ -27,12 +27,22 @@ const understandingReducer = (state = [], action) => {
     }
 }
 
+const supportReducer = ( state = [], action) => {
+    switch (action.tyoe) {
+        case 'ADD_SUPPORT':
+            return action.payload;
+        default: 
+            return state;
+    }
+}
+
 
 const storeInstance = createStore(
     combineReducers({
         //Reducers go here
         feelingReducer,
-        understandingReducer
+        understandingReducer,
+        supportReducer
     }),
     applyMiddleware(
         logger
