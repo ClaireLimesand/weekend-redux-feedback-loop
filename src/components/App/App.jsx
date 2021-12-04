@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import './App.css';
 import FeelingForm from "../Feeling/Feeling.jsx"
+import UnderstandingForm from "../Understanding/Understanding.jsx"
 import { HashRouter as Router, Route, Link } from "react-router-dom";
 
 function App() {
@@ -13,11 +14,11 @@ function App() {
         <h4>Don't forget it!</h4>
       </header>
     < FeelingForm />
-    {/* <Router>
-      <Route exact path="/"> */}
-{/* <compontent name will go here /> */}
-      {/* </Route>
-    </Router> */}
+    <Router>
+      <Route exact path="/understanding">
+        <UnderstandingForm />
+      </Route>
+    </Router>
     
     </div>
     
