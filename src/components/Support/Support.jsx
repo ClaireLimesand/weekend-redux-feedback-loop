@@ -19,6 +19,7 @@ function SupportForm() {
 
     const onSupportSubmit = () => {
         console.log('Support dispatch');
+        console.log('support input:', supportInput)
         dispatch({
             type: 'ADD_SUPPORT',
             payload: supportInput

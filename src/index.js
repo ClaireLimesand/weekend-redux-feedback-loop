@@ -28,7 +28,7 @@ const understandingReducer = (state = [], action) => {
 }
 
 const supportReducer = ( state = [], action) => {
-    switch (action.tyoe) {
+    switch (action.type) {
         case 'ADD_SUPPORT':
             return action.payload;
         default: 

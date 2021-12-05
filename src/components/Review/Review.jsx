@@ -24,6 +24,6 @@ function ReviewPage() {
         </div>
     )
 
-} 
+} // end ReviewPage
 
 export default ReviewPage;
