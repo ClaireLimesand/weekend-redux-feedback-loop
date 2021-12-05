@@ -37,7 +37,8 @@ function FeelingForm() {
         <input
             onChange={getFeelingInput}
             type="number"
-            placeholder="1-5"/>
+            placeholder="1-5"
+            required />
         <button onClick={onFeelingSubmit}>Next</button>
     </div>
     )

@@ -14,20 +14,20 @@ function ReviewPage() {
 
     const postData = () => {
         console.log('inside POST');
-        // axios ({
-        //     method: 'POST',
-        //     url:  
-        //     data: {
-        //         "feeling": `${feeling.feeling}`,
-        //         "understanding": `${understanding.understanding}`,
-        //         "support": `${support.support}`,
-        //         "comments": `$(comments.comments)`
-        //     }
-        // }).then ((response) => {
-        //     console.log('feedback', feedback);
-        // }).catch ((error) => {
-        //     console.log('error', error);
-        // })
+        axios ({
+            method: 'POST',
+            url:  '/',
+            data: {
+                "feeling": `${feeling.feeling}`,
+                "understanding": `${understanding.understanding}`,
+                "support": `${support.support}`,
+                "comments": `$(comments.comments)`
+            }
+        }).then ((response) => {
+            console.log('feedback', feedback);
+        }).catch ((error) => {
+            console.log('error', error);
+        })
         goToFinal();
     }
 
@@ -43,6 +43,7 @@ function ReviewPage() {
             <h5>Understanding: {understanding.understanding}</h5>
             <h5>Support: {support.support}</h5>
             <h5>Comments: {comments.comments}</h5>
+
             <button onClick={postData}>Submit Feedback</button>
         </div>
     )

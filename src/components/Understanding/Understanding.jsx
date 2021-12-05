@@ -37,7 +37,8 @@ function UnderstandingForm() {
             <input
                 onChange={getUnderstandingInput}
                 type="number"
-                placeholder="1-5"/>
+                placeholder="1-5"
+                required />
             <button onClick={onUnderstandingSubmit}>Next</button>
         </div>
     )
