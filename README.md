@@ -5,13 +5,15 @@ Duration: weekend sprint
 
 A user inputs feedback which they can then review on the DOM before sending it off to the database. This was my first project using Redux, and it was a fun one to start with! 
 
+![](./public/images/screenshot.png)
+
 ## Prerequesites
 None
 
 ## Usage
 1. Enter your feedback between 1 and 5
 2. Leave a comment
-    a. If the comment field is left blank it will be displayed as "No comments were left"
+     - If the comment field is left blank it will be displayed as "No comments were left"
 3. Review your feedback and click 'Submit' to send it to the database 
 
 ## Built With
