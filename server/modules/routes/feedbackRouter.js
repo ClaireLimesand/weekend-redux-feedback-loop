@@ -1,23 +1,28 @@
 const express = require('express');
 const router = express.Router();
-const pool = require('../routes/pool');
+const pg = require('pg');
+const Pool = pg.Pool;
+
+const pool = new Pool({
+    database: 'prime_feedback', 
+    host: 'localhost', 
+});
 
 router.post('/', (req, res) => {
     console.log('POST /feedback');
     console.log('req.body:', req.body);
-    const newKoala = req.body;
-    const sqlText = `
+    let finalFeedback = req.body;
+    let sqlText = `
     INSERT INTO "feedback"
-        ("name", "gender", "age", "ready_to_transfer", "notes")
+        ("feeling", "understanding", "support", "comments")
     VALUES
-        ($1, $2, $3, $4, $5);
+        ($1, $2, $3, $4);
     `;
     const sqlValues = [
-    newKoala.name,
-    newKoala.gender,
-    newKoala.age,
-    newKoala.transferStatus,
-    newKoala.notes
+    finalFeedback.feeling,
+    finalFeedback.understanding,
+    finalFeedback.support,
+    finalFeedback.comments
     ];
     pool.query(sqlText, sqlValues)
         .then((dbResult) => {

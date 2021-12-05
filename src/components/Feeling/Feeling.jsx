@@ -32,15 +32,16 @@ function FeelingForm() {
     }
     
     return (
-    <div>
+    <form onSubmit={onFeelingSubmit}>
         <h3>How are you feeling today?</h3>
         <input
             onChange={getFeelingInput}
             type="number"
             placeholder="1-5"
-            required />
-        <button onClick={onFeelingSubmit}>Next</button>
-    </div>
+            required 
+            />
+        <button>Next</button>
+    </form>
     )
 
 } // end FeelingForm

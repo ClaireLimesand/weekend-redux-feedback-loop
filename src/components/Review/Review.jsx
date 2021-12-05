@@ -16,12 +16,12 @@ function ReviewPage() {
         console.log('inside POST');
         axios ({
             method: 'POST',
-            url:  '/',
+            url:  '/feedback',
             data: {
                 "feeling": `${feeling.feeling}`,
                 "understanding": `${understanding.understanding}`,
                 "support": `${support.support}`,
-                "comments": `$(comments.comments)`
+                "comments": `${comments.comments}`,
             }
         }).then ((response) => {
             console.log('feedback', feedback);

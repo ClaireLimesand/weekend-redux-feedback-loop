@@ -6,10 +6,8 @@
 
 const pg = require('pg');
 const url = require('url');
-let config = {
-    host: 'localhost',
-    database: 'prime_feedback'
-};
+
+const config = {};
 
 if (process.env.DATABASE_URL) {
     // Heroku gives a url, not a connection object
