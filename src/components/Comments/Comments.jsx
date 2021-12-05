@@ -32,13 +32,14 @@ function CommentsForm() {
     }
 
     return (
-    <div>
+    <form onSubmit={onCommentsSubmit}>
         <h3>Any comments you want to leave?</h3>
         <input 
             onChange={getCommentsInput}
-            type="text" />
+            type="text" 
+        />
         <button onClick={onCommentsSubmit}>Next</button>
-    </div>
+    </form>
     )
 
 } // end CommentsForm

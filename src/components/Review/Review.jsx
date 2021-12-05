@@ -36,13 +36,31 @@ function ReviewPage() {
         history.push('/FinalPage');
     }
 
+    const displayComments = () => {
+        if (comments.comments == "") {
+            console.log('in zero comment')
+            return (
+                <div>
+                    <h5>Comments: No comments were left</h5>
+                </div>
+            )
+        } else {
+            console.log('in comment')
+            return (
+                <div>
+                    <h5>Comments: {comments.comments}</h5>
+                </div>
+            )
+        }
+    };
+
     return (
         <div>
             <h3>Review Your Feedback:</h3>
             <h5>Feeling: {feeling.feeling}</h5>
             <h5>Understanding: {understanding.understanding}</h5>
             <h5>Support: {support.support}</h5>
-            <h5>Comments: {comments.comments}</h5>
+            {displayComments()}
 
             <button onClick={postData}>Submit Feedback</button>
         </div>

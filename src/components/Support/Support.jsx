@@ -33,14 +33,16 @@ function SupportForm() {
     }
 
     return (
-    <div>
+    <form onSubmit={onSupportSubmit}>
         <h3>How well are you being supported?</h3>
         <input 
             onChange={getSupportInput}
             type="number"
-            placeholder="1-5"/>
-        <button onClick={onSupportSubmit}>Next</button>
-    </div>
+            placeholder="1-5"
+            required
+        />
+        <button>Next</button>
+    </form>
     )
 
 } // end SupportForm

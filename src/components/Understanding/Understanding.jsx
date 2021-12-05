@@ -32,15 +32,16 @@ function UnderstandingForm() {
     }
 
     return (
-        <div>
+        <form onSubmit={onUnderstandingSubmit}>
             <h3>How well are you understanding the content?</h3>
             <input
                 onChange={getUnderstandingInput}
                 type="number"
                 placeholder="1-5"
-                required />
-            <button onClick={onUnderstandingSubmit}>Next</button>
-        </div>
+                required 
+            />
+            <button>Next</button>
+        </form>
     )
 
 } // end UnderstandingForm
