@@ -6,6 +6,7 @@ import UnderstandingForm from "../Understanding/Understanding.jsx";
 import SupportForm from "../Support/Support.jsx";
 import CommentsForm from "../Comments/Comments.jsx";
 import ReviewPage from "../Review/Review.jsx";
+import FinalPage from "../Final/Final.jsx";
 import { HashRouter as Router, Route } from "react-router-dom";
 
 function App() {
@@ -36,6 +37,9 @@ function App() {
       </Route>
       <Route exact path="/ReviewPage">
         <ReviewPage />
+      </Route>
+      <Route exact path="/FinalPage">
+        <FinalPage />
       </Route>
     </Router>
     

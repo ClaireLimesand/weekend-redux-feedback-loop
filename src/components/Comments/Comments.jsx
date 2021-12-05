@@ -24,22 +24,21 @@ function CommentsForm() {
             payload: commentsInput
         });
         goToReview();
-        // history.push('/review');
     }
 
     const goToReview = () => {
-        console.log('going to /review');
+        console.log('going to review');
         history.push('/ReviewPage');
     }
 
     return (
-    <form>
+    <div>
         <h3>Any comments you want to leave?</h3>
         <input 
             onChange={getCommentsInput}
             type="text" />
         <button onClick={onCommentsSubmit}>Next</button>
-    </form>
+    </div>
     )
 
 } // end CommentsForm

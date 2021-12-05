@@ -28,19 +28,19 @@ function SupportForm() {
     }
 
     const goToComments = () => {
-        console.log('going to /comments');
+        console.log('going to comments');
         history.push('/CommentsForm');
     }
 
     return (
-    <form>
+    <div>
         <h3>How well are you being supported?</h3>
         <input 
             onChange={getSupportInput}
             type="number"
             placeholder="1-5"/>
         <button onClick={onSupportSubmit}>Next</button>
-    </form>
+    </div>
     )
 
 } // end SupportForm

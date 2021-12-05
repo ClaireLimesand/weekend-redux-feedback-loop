@@ -4,6 +4,9 @@ import { useSelector } from 'react-redux';
 import {useHistory} from 'react-router-dom';
 
 function ReviewPage() {
+
+    const history = useHistory();
+
     const feeling = useSelector(store => store.feelingReducer);
     const understanding = useSelector(store => store.understandingReducer);
     const support = useSelector(store => store.supportReducer);
@@ -25,6 +28,12 @@ function ReviewPage() {
         // }).catch ((error) => {
         //     console.log('error', error);
         // })
+        goToFinal();
+    }
+
+    const goToFinal = () => {
+        console.log('going to final');
+        history.push('/FinalPage');
     }
 
     return (
