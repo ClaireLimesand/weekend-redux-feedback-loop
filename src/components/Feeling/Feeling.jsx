@@ -20,6 +20,7 @@ function FeelingForm() {
             feeling: event.target.value
         });
     }
+    
 
     const onFeelingSubmit = () => {
         console.log('Feeling Dispatch');
@@ -35,15 +36,23 @@ function FeelingForm() {
         history.push('/UnderstandingForm');
     }
     
+    const limitFeelings = () => {
+        if (feelingInput.feeling > 0 && feelingInput.feeling < 5) {
+            onFeelingSubmit()
+        } else {
+            alert("Feedback must be between 1 and 5")
+        }
+    }
+
     return (
-    <form onSubmit={onFeelingSubmit}>
+    <form onSubmit={limitFeelings}>
         <h3>How are you feeling today?</h3>
         <input
             onChange={getFeelingInput}
             type="number"
             placeholder="1-5"
-            required 
-        />
+            required
+            />
         <button type="submit">Next</button>
     </form>
     )

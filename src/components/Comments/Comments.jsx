@@ -37,9 +37,12 @@ function CommentsForm() {
         <input 
             className="commentForm"
             onChange={getCommentsInput}
+            placeholder="your comment"
             type="text" 
         />
-        <button type="submit">Next</button>
+        <div>
+            <button type="submit">Next</button>
+        </div>
     </form>
     )
 

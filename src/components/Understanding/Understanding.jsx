@@ -35,8 +35,16 @@ function UnderstandingForm() {
         history.push('/SupportForm');
     }
 
+    const limitUnderstanding = () => {
+        if (understandingInput.understanding > 0 && understandingInput.understanding < 5) {
+            onUnderstandingSubmit()
+        } else {
+            alert("Feedback must be between 1 and 5")
+        }
+    }
+
     return (
-        <form onSubmit={onUnderstandingSubmit}>
+        <form onSubmit={limitUnderstanding}>
             <h3>How well are you understanding the content?</h3>
             <input
                 onChange={getUnderstandingInput}

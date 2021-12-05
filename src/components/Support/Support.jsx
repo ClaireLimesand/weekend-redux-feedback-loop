@@ -32,8 +32,16 @@ function SupportForm() {
         history.push('/CommentsForm');
     }
 
+    const limitSupport = () => {
+        if (supportInput.support > 0 && supportInput.support < 5) {
+            onSupportSubmit()
+        } else {
+            alert("Feedback must be between 1 and 5")
+        }
+    }
+
     return (
-    <form onSubmit={onSupportSubmit}>
+    <form onSubmit={limitSupport}>
         <h3>How well are you being supported?</h3>
         <input 
             onChange={getSupportInput}

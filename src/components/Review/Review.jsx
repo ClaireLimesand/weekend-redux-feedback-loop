@@ -48,7 +48,7 @@ function ReviewPage() {
             console.log('in comment')
             return (
                 <div>
-                    <h5>Comments: {comments.comments}</h5>
+                    <h4>Comments: {comments.comments}</h4>
                 </div>
             )
         }
@@ -57,9 +57,9 @@ function ReviewPage() {
     return (
         <div>
             <h3>Review Your Feedback:</h3>
-            <h5>Feeling: {feeling.feeling}</h5>
-            <h5>Understanding: {understanding.understanding}</h5>
-            <h5>Support: {support.support}</h5>
+            <h4>Feeling: {feeling.feeling}</h4>
+            <h4>Understanding: {understanding.understanding}</h4>
+            <h4>Support: {support.support}</h4>
             {displayComments()}
 
             <button onClick={postData}>Submit Feedback</button>
