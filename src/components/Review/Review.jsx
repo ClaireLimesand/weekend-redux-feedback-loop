@@ -10,7 +10,21 @@ function ReviewPage() {
     const comments = useSelector(store => store.commentsReducer)
 
     const postData = () => {
-        console.log('inside POST')
+        console.log('inside POST');
+        // axios ({
+        //     method: 'POST',
+        //     url:  
+        //     data: {
+        //         "feeling": `${feeling.feeling}`,
+        //         "understanding": `${understanding.understanding}`,
+        //         "support": `${support.support}`,
+        //         "comments": `$(comments.comments)`
+        //     }
+        // }).then ((response) => {
+        //     console.log('feedback', feedback);
+        // }).catch ((error) => {
+        //     console.log('error', error);
+        // })
     }
 
     return (
