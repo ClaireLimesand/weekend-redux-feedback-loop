@@ -1,13 +1,21 @@
+import React from 'react';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import {useHistory} from 'react-router-dom';
 
 function UnderstandingForm() {
 
-    const [understandingInput, setUnderstandingInput] = useState('');
+    const [understandingInput, setUnderstandingInput] = useState({understanding: 0});
 
     const dispatch = useDispatch();
     const history = useHistory();
+
+    const getUnderstandingInput = (event) => {
+        setUnderstandingInput({
+            ...understandingInput,
+            understanding: event.target.value
+        });
+    }
 
     const onUnderstandingSubmit = () => {
         console.log('Understanding dispatch');
@@ -26,8 +34,7 @@ function UnderstandingForm() {
         <form>
             <h3>How well are you understanding the content?</h3>
             <input
-                value={understandingInput}
-                onChange={(event) => {setUnderstandingInput(event.target.value)}}
+                onChange={getUnderstandingInput}
                 type="number"
                 placeholder="1-5"/>
             <button onClick={onUnderstandingSubmit}>Next</button>

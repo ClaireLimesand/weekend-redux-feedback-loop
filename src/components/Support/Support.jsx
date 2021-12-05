@@ -1,13 +1,21 @@
+import React from 'react';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import {useHistory} from 'react-router-dom';
 
 function SupportForm() {
 
-    const  [supportInput, setSupportInput] = useState('');
+    const  [supportInput, setSupportInput] = useState({support: 0});
 
     const dispatch = useDispatch();
     const history = useHistory();
+
+    const getSupportInput = (event) => {
+        setSupportInput({
+            ...supportInput,
+            support: event.target.value
+        });
+    }
 
     const onSupportSubmit = () => {
         console.log('Support dispatch');
@@ -26,8 +34,7 @@ function SupportForm() {
     <form>
         <h3>How well are you being supported?</h3>
         <input 
-            value={supportInput}
-            onChange={(event) => {setSupportInput(event.target.value)}}
+            onChange={getSupportInput}
             type="number"
             placeholder="1-5"/>
         <button onClick={onSupportSubmit}>Next</button>

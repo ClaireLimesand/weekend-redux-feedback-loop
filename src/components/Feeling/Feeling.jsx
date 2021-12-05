@@ -1,13 +1,21 @@
+import React from 'react';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import {useHistory} from 'react-router-dom';
 
 function FeelingForm() {
 
-    const [feelingInput, setFeelingInput] = useState('');
+    const [feelingInput, setFeelingInput] = useState({feeling: 0});
     
     const dispatch = useDispatch();
     const history = useHistory();
+
+    const getFeelingInput = (event) => {
+        setFeelingInput({
+            ...feelingInput,
+            feeling: event.target.value
+        });
+    }
 
     const onFeelingSubmit = () => {
         console.log('Feeling Dispatch');
@@ -27,8 +35,7 @@ function FeelingForm() {
     <form>
         <h3>How are you feeling today?</h3>
         <input
-            value={feelingInput}
-            onChange={(event) => {setFeelingInput(event.target.value)}}
+            onChange={getFeelingInput}
             type="number"
             placeholder="1-5"/>
         <button onClick={onFeelingSubmit}>Next</button>

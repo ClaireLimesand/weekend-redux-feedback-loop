@@ -1,13 +1,21 @@
+import React from 'react';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import {useHistory} from 'react-router-dom';
 
 function CommentsForm() {
     
-    const [commentsInput, setCommentsInput] = useState('');
+    const [commentsInput, setCommentsInput] = useState({comments: ""});
 
     const dispatch = useDispatch();
     const history = useHistory();
+
+    const getCommentsInput = (event) => {
+        setCommentsInput({
+            ...commentsInput,
+            comments: event.target.value
+        })
+    }
     
     const onCommentsSubmit = () => {
         console.log('Comments dispatch');
@@ -26,8 +34,7 @@ function CommentsForm() {
     <form>
         <h3>Any comments you want to leave?</h3>
         <input 
-            value={commentsInput}
-            onChange={(event) => {setCommentsInput(event.target.value)}}
+            onChange={getCommentsInput}
             type="text" />
         <button onClick={onCommentsSubmit}>Next</button>
     </form>
