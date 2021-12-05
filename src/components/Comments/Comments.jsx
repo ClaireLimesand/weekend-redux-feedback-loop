@@ -35,10 +35,11 @@ function CommentsForm() {
     <form onSubmit={onCommentsSubmit}>
         <h3>Any comments you want to leave?</h3>
         <input 
+            className="commentForm"
             onChange={getCommentsInput}
             type="text" 
         />
-        <button onClick={onCommentsSubmit}>Next</button>
+        <button type="submit">Next</button>
     </form>
     )
 

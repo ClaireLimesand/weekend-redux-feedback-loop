@@ -44,7 +44,7 @@ function FeelingForm() {
             placeholder="1-5"
             required 
         />
-        <button>Next</button>
+        <button type="submit">Next</button>
     </form>
     )
 

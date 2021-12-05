@@ -7,6 +7,7 @@ import SupportForm from "../Support/Support.jsx";
 import CommentsForm from "../Comments/Comments.jsx";
 import ReviewPage from "../Review/Review.jsx";
 import FinalPage from "../Final/Final.jsx";
+
 import { HashRouter as Router, Route } from "react-router-dom";
 
 function App() {
@@ -17,11 +18,6 @@ function App() {
         <h1 className='App-title'>Feedback!</h1>
         <h4>Don't forget it!</h4>
       </header>
-    {/* < FeelingForm /> */}
-    {/* < UnderstandingForm /> */}
-    {/* < SupportForm /> */}
-    {/* < CommentsForm />
-    < ReviewPage /> */}
     <Router>
       <Route exact path="/">
         <FeelingForm />
