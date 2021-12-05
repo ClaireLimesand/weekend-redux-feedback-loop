@@ -5,7 +5,7 @@ import {useHistory} from 'react-router-dom';
 
 function SupportForm() {
 
-    const  [supportInput, setSupportInput] = useState({support: 0});
+    const [supportInput, setSupportInput] = useState({support: 0});
 
     const dispatch = useDispatch();
     const history = useHistory();
