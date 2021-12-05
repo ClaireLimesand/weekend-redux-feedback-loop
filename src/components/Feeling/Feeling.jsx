@@ -2,13 +2,17 @@ import React from 'react';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import {useHistory} from 'react-router-dom';
+// importing all my dependencies 
 
 function FeelingForm() {
 
     const [feelingInput, setFeelingInput] = useState({feeling: 0});
+    // using useState to set the state of feeling input to an 
+    // array with an object of feeling: 0
     
     const dispatch = useDispatch();
     const history = useHistory();
+    // declaring dispatch and history
 
     const getFeelingInput = (event) => {
         setFeelingInput({
