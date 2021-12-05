@@ -24,21 +24,22 @@ function FeelingForm() {
             payload: feelingInput
         });
         goToUnderstanding();
+        // history.push('/UnderstandingForm');
     }
 
     const goToUnderstanding = () => {
-        console.log('going to /understanding')
-        // history.push('/understanding');
+        console.log('going to /understanding');
+        history.push('/UnderstandingForm');
     }
     
     return (
-    <form>
+    <form onSubmit={onFeelingSubmit}>
         <h3>How are you feeling today?</h3>
         <input
             onChange={getFeelingInput}
             type="number"
             placeholder="1-5"/>
-        <button onClick={onFeelingSubmit}>Next</button>
+        <button>Next</button>
     </form>
     )
 

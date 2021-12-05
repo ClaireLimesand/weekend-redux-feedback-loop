@@ -24,10 +24,12 @@ function CommentsForm() {
             payload: commentsInput
         });
         goToReview();
+        // history.push('/review');
     }
 
     const goToReview = () => {
-        console.log('going to /review')
+        console.log('going to /review');
+        history.push('/ReviewPage');
     }
 
     return (

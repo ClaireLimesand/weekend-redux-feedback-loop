@@ -27,17 +27,18 @@ function UnderstandingForm() {
     }
 
     const goToSupport = () => {
-        console.log('going to /Support')
+        console.log('going to /Support');
+        history.push('/SupportForm');
     }
 
     return (
-        <form>
+        <form onSubmit={onUnderstandingSubmit}>
             <h3>How well are you understanding the content?</h3>
             <input
                 onChange={getUnderstandingInput}
                 type="number"
                 placeholder="1-5"/>
-            <button onClick={onUnderstandingSubmit}>Next</button>
+            <button >Next</button>
         </form>
     )
 

@@ -16,14 +16,26 @@ function App() {
         <h1 className='App-title'>Feedback!</h1>
         <h4>Don't forget it!</h4>
       </header>
-    < FeelingForm />
-    < UnderstandingForm />
-    < SupportForm />
-    < CommentsForm />
-    < ReviewPage />
+    {/* < FeelingForm /> */}
+    {/* < UnderstandingForm /> */}
+    {/* < SupportForm /> */}
+    {/* < CommentsForm />
+    < ReviewPage /> */}
     <Router>
-      <Route exact path="/understanding">
+      <Route exact path="/">
+        <FeelingForm />
+      </Route>
+      <Route exact path="/UnderstandingForm">
         <UnderstandingForm />
+      </Route>
+      <Route exact path="/SupportForm">
+        <SupportForm />
+      </Route>
+      <Route exact path="/CommentsForm">
+        <CommentsForm />
+      </Route>
+      <Route exact path="/ReviewPage">
+        <ReviewPage />
       </Route>
     </Router>
     

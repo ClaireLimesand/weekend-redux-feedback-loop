@@ -28,7 +28,8 @@ function SupportForm() {
     }
 
     const goToComments = () => {
-        console.log('going to /comments')
+        console.log('going to /comments');
+        history.push('/CommentsForm');
     }
 
     return (
