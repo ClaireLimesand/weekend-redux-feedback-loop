@@ -10,7 +10,8 @@ function ReviewPage() {
     const feeling = useSelector(store => store.feelingReducer);
     const understanding = useSelector(store => store.understandingReducer);
     const support = useSelector(store => store.supportReducer);
-    const comments = useSelector(store => store.commentsReducer)
+    const comments = useSelector(store => store.commentsReducer);
+    // sets new values to send to router based on reducers 
 
     const postData = () => {
         console.log('inside POST');
@@ -30,18 +31,20 @@ function ReviewPage() {
         })
         goToFinal();
     }
+    // sends data 
 
     const goToFinal = () => {
         console.log('going to final');
         history.push('/FinalPage');
     }
+    // sends user to next page
 
     const displayComments = () => {
         if (comments.comments == "") {
             console.log('in zero comment')
             return (
                 <div>
-                    <h5>Comments: No comments were left</h5>
+                    <h4>Comments: No comments were left</h4>
                 </div>
             )
         } else {
@@ -53,6 +56,7 @@ function ReviewPage() {
             )
         }
     };
+    // changes comments diplay if user put comments or didn't 
 
     return (
         <div>
@@ -61,7 +65,6 @@ function ReviewPage() {
             <h4>Understanding: {understanding.understanding}</h4>
             <h4>Support: {support.support}</h4>
             {displayComments()}
-
             <button onClick={postData}>Submit Feedback</button>
         </div>
     )

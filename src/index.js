@@ -17,6 +17,7 @@ const feelingReducer = (state = [], action) => {
             return state;
     }
 };
+// reducer to catch feeling value
 
 const understandingReducer = (state = [], action) => {
     switch (action.type) {
@@ -25,7 +26,8 @@ const understandingReducer = (state = [], action) => {
         default:
             return state;
     }
-}
+};
+// reducer to catch understanding value
 
 const supportReducer = ( state = [], action) => {
     switch (action.type) {
@@ -34,7 +36,8 @@ const supportReducer = ( state = [], action) => {
         default: 
             return state;
     }
-}
+};
+// reducer to catch support value
 
 const commentsReducer = ( state = [], action) => {
     switch (action.type) {
@@ -43,8 +46,8 @@ const commentsReducer = ( state = [], action) => {
         default:
             return state;
     }
-}
-
+};
+// reducer to catch comments value
 
 const storeInstance = createStore(
     combineReducers({

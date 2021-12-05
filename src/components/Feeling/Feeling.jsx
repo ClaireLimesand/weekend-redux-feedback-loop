@@ -7,7 +7,7 @@ import {useHistory} from 'react-router-dom';
 function FeelingForm() {
 
     const [feelingInput, setFeelingInput] = useState({feeling: 0});
-    // using useState to set the state of feeling input to an 
+    // using useState to set the state of feelingInput to an 
     // array with an object of feeling: 0
     
     const dispatch = useDispatch();
@@ -19,8 +19,10 @@ function FeelingForm() {
             ...feelingInput,
             feeling: event.target.value
         });
+        // uses spread operator on feelingInput
+        // sets feeling value
     }
-    
+
 
     const onFeelingSubmit = () => {
         console.log('Feeling Dispatch');
@@ -28,13 +30,16 @@ function FeelingForm() {
             type: 'ADD_FEELING',
             payload: feelingInput
         });
-        goToUnderstanding();
+        // dispatches feelingInput to feelingReducer
+        goToUnderstanding()
+        // sends user to next page
     }
 
     const goToUnderstanding = () => {
         console.log('going to understanding');
         history.push('/UnderstandingForm');
     }
+    // sends user to next page
     
     const limitFeelings = () => {
         if (feelingInput.feeling > 0 && feelingInput.feeling < 5) {
@@ -43,6 +48,7 @@ function FeelingForm() {
             alert("Feedback must be between 1 and 5")
         }
     }
+    // only submits form if input value is between 1 and 5
 
     return (
     <form onSubmit={limitFeelings}>

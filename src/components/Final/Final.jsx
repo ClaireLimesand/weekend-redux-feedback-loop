@@ -9,6 +9,7 @@ function FinalPage() {
         console.log('going to start');
         history.push('/');
     }
+    // sends user back to home page
 
     return (
         <div>

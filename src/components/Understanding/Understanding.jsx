@@ -19,6 +19,8 @@ function UnderstandingForm() {
             ...understandingInput,
             understanding: event.target.value
         });
+        // uses spread operator on understandingInput
+        // sets understanding value
     }
 
     const onUnderstandingSubmit = () => {
@@ -27,13 +29,16 @@ function UnderstandingForm() {
             type: 'ADD_UNDERSTANDING',
             payload: understandingInput
         });
+         // dispatches understandingInput to understandingReducer
         goToSupport();
+        // sends user to next page
     }
 
     const goToSupport = () => {
         console.log('going to support');
         history.push('/SupportForm');
     }
+    // sends user to next page
 
     const limitUnderstanding = () => {
         if (understandingInput.understanding > 0 && understandingInput.understanding < 5) {
@@ -42,6 +47,7 @@ function UnderstandingForm() {
             alert("Feedback must be between 1 and 5")
         }
     }
+    // only submits form if input value is between 1 and 5
 
     return (
         <form onSubmit={limitUnderstanding}>
